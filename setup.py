@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='ConsoleMenu',
     packages=['consolemenu'],
-    version='1.0.0',
+    version='1.0.1',
     license='MIT',
     description='Simplest console menu you\'ve ever seen.\n'
                 'Made on dicts, it allows you to easily implement a console menu '
@@ -12,7 +12,7 @@ setup(
     author='Egor Almikeev',
     author_email='ealmikeew@gmail.com',
     url='https://github.com/EgorAlmikeev/ConsoleMenu',
-    download_url='https://github.com/EgorAlmikeev/ConsoleMenu/archive/v1.0.0.tar.gz',
+    download_url='https://github.com/EgorAlmikeev/ConsoleMenu/archive/v_1.0.0.tar.gz',
     keywords=['CONSOLE', 'MENU', 'CONSOLEMENU'],
     install_requires=[],
     classifiers=[
