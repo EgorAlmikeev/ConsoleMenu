@@ -1,8 +1,13 @@
 # ConsoleMenu
-A simple console menu for Python3.x scripts
+The simpliest console menu for Python3.x scripts
 
-## How to
-All you need to do is to use dictionaries to define the structure of your menu.
+## Install it
+```
+pip install ConsoleMenu
+```
+
+## Use it
+All you need is to declare the structure of your menu by using a simple dictionaries.
 You're able to use functions and other menus as items, so you can build an infinitive nested menu.
 Then call **execute** method and that's it!
 
