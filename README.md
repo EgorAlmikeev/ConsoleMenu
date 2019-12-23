@@ -7,7 +7,7 @@ You're able to use functions and other menus as items, so you can build an infin
 Then call **execute** method and that's it!
 
 ```python
-import consolemenu
+from consolemenu import ConsoleMenu
 
 def func1():
     # Your code here
