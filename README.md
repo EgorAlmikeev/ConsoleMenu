@@ -1,5 +1,5 @@
 # ConsoleMenu
-The simpliest console menu for Python3.x scripts
+The simplest console menu for Python3.x scripts
 
 ## Install it
 ```
