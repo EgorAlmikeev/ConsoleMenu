@@ -11,12 +11,22 @@ if __name__ == "__main__":
         print("Im func3")
         raise Exception
 
-    menu = ConsoleMenu(
-        "This is a test menu",
+    nested_menu = ConsoleMenu(
+        "Sample nested menu",
         {
             "call func1": func1,
             "call func2": func2,
             "call func3": func3,
+        }
+    )
+
+    menu = ConsoleMenu(
+        "Sample menu",
+        {
+            "call func1": func1,
+            "call func2": func2,
+            "call func3": func3,
+            "goto nested menu": nested_menu,
         }
     )
     menu.execute()

@@ -1,7 +1,7 @@
 class ConsoleMenu:
     """
     A simple console menu allows you to easily implement a basic user interface.
-    You can find a sample below.
+    You can find a sample in samples.py
     """
     def __init__(self, title, items: dict):
         """
@@ -10,6 +10,7 @@ class ConsoleMenu:
         """
         self.items = items
         self.title = title
+        self.__nested = False
 
     def __display(self):
         print("\n")
@@ -18,7 +19,7 @@ class ConsoleMenu:
         for key in self.items:
             print(str(i) + ") " + str(key))
             i += 1
-        print(str(i) + ") " + "exit")
+        print("{}) {}".format(str(i), "back" if self.__nested else "exit"))
 
     def execute(self):
         while True:
@@ -30,16 +31,24 @@ class ConsoleMenu:
                 print("Error: Invalid input type")
                 continue
             except KeyboardInterrupt:
-                exit()
+                break
 
             if argument not in range(1, len(self.items) + 2):
                 print("Error: No such item in menu")
                 continue
 
             if argument == len(self.items) + 1:
-                exit()
+                break
 
             try:
-                list(self.items.values())[argument - 1]()
+                item = list(self.items.values())[argument - 1]
+
+                if isinstance(item, ConsoleMenu):
+                    item.__nested = True
+                    item.execute()
+                    item.__nested = False
+                else:
+                    item()
+
             except Exception:
                 print("Error: Failed to run item '{}'".format(list(self.items.keys())[argument - 1]))
