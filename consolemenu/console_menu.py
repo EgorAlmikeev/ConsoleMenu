@@ -1,7 +1,6 @@
 class ConsoleMenu:
     """
     A simple console menu allows you to easily implement a basic user interface.
-    You can find a sample in samples.py
     """
     def __init__(self, title, items: dict):
         """
