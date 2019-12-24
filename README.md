@@ -3,7 +3,7 @@ The simplest console menu for Python3.x scripts
 
 ## Install it
 ```
-pip install ConsoleMenu
+pip install consolemenu
 ```
 
 ## Use it
