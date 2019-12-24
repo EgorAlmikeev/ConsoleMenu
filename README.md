@@ -15,13 +15,13 @@ Then call **execute** method and that's it!
 from consolemenu import ConsoleMenu
 
 def func1():
-    # Your code here
+    print("Im func1")
 
 def func2():
-    # Your code here
+    print("Im func2")
 
 def func3():
-    # Your code here
+    print("Im func3")
 
 nested_menu = ConsoleMenu(
     "Sample nested menu",
